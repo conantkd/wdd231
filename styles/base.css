@@ -2,6 +2,7 @@
   --dark: #36454f;
   --blue: #304860;
   --blue-selected: #304860;
+  --blue-selected-border: #243746;
   --white: #ffffff;
   --gray: #707070;
   --light: #e6e9eb;
@@ -178,7 +179,7 @@ h1 {
 }
 .filter-button.selected {
   background-color: var(--blue-selected);
-  border-color: var(--blue-selected);
+  border-color: var(--blue-selected-border);
   color: var(--white);
 }
 .courses-classes {
@@ -197,7 +198,7 @@ h1 {
 }
 .course-item.completed {
   background-color: var(--blue-selected);
-  border-color: var(--blue-selected);
+  border-color: var(--blue-selected-border);
   color: var(--white);
 }
 .course-item.completed::before {
