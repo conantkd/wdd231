@@ -1,6 +1,7 @@
 :root {
   --dark: #36454f;
   --blue: #304860;
+  --blue-selected: #304860;
   --white: #ffffff;
   --gray: #707070;
   --light: #e6e9eb;
@@ -176,8 +177,8 @@ h1 {
   background: var(--light-hover);
 }
 .filter-button.selected {
-  background: var(--blue);
-  border-color: var(--blue);
+  background-color: var(--blue-selected);
+  border-color: var(--blue-selected);
   color: var(--white);
 }
 .courses-classes {
@@ -195,8 +196,8 @@ h1 {
   font-weight: 600;
 }
 .course-item.completed {
-  background: var(--blue);
-  border-color: var(--blue);
+  background-color: var(--blue-selected);
+  border-color: var(--blue-selected);
   color: var(--white);
 }
 .course-item.completed::before {
