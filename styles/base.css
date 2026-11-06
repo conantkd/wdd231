@@ -1,0 +1,271 @@
+:root {
+  --dark: #36454f;
+  --blue: #304860;
+  --white: #ffffff;
+  --gray: #707070;
+  --light: #e6e9eb;
+  --text: #17232b;
+  --button-text: #101010;
+  --light-hover: #c9d1d6;
+  --light-border: #a4aeb4;
+  --primary-font: "Roboto", sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+}
+body {
+  margin: 0;
+  font-family: var(--primary-font);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--white);
+}
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+a {
+  color: inherit;
+}
+.site-header {
+  background: var(--white);
+}
+.header-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0.7rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  min-width: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.brand-logo {
+  color: var(--dark);
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+}
+.menu-button {
+  display: grid;
+  place-items: center;
+  width: 45px;
+  height: 45px;
+  padding: 0;
+  border: 0.05rem solid var(--gray);
+  border-radius: 0.25rem;
+  background: var(--light);
+  color: var(--button-text);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.primary-navigation {
+  background: var(--dark);
+}
+.primary-navigation ul {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  display: none;
+}
+.primary-navigation.open ul {
+  display: flex;
+  flex-direction: column;
+}
+.primary-navigation a {
+  display: block;
+  padding: 0.8rem 1rem;
+  text-decoration: none;
+  color: var(--white);
+  transition: background-color 0.15s ease;
+}
+.primary-navigation a:hover,
+.primary-navigation a:focus-visible {
+  background: var(--blue);
+}
+.primary-navigation a.active {
+  background: var(--blue);
+  font-weight: 700;
+}
+
+main {
+  width: min(100% - 2rem, 1170px);
+  margin: 0 auto 2rem;
+}
+h1 {
+  font-size: 1.6rem;
+  margin: 1rem 0 0.5rem;
+}
+.content-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+}
+.card {
+  min-width: 0;
+  background: var(--light);
+  border-radius: 0.2rem;
+  overflow: hidden;
+}
+.card h2 {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0.45rem 0.75rem;
+  text-align: center;
+  background: var(--dark);
+  color: var(--white);
+}
+.card-about p {
+  margin: 0;
+  padding: 1rem;
+}
+.photo-container {
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+.photo-container img {
+  width: min(100%, 280px);
+  height: auto;
+  max-height: 320px;
+  object-fit: contain;
+  border-radius: 0.25rem;
+}
+/** courses **/
+.card-courses {
+  background: var(--white);
+}
+.courses-filter {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin: 0.8rem 0;
+}
+.filter-button {
+  font: inherit;
+  font-weight: 600;
+  color: var(--text);
+  border: 0.05rem solid var(--gray);
+  border-radius: 0.3rem;
+  background: var(--light);
+  min-height: 45px;
+  padding: 0.45rem 0.6rem;
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+.filter-button:hover,
+.filter-button:focus-visible {
+  background: var(--light-hover);
+}
+.filter-button.selected {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: var(--white);
+}
+.courses-classes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.55rem;
+}
+.course-item {
+  text-align: center;
+  padding: 0.55rem;
+  min-width: 0;
+  background: var(--light);
+  border: 0.05rem solid var(--light-border);
+  border-radius: 0.2rem;
+  font-weight: 600;
+}
+.course-item.completed {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: var(--white);
+}
+.course-item.completed::before {
+  content: "✓ ";
+}
+.credits-total {
+  padding: 0.65rem 0.25rem 0.1rem;
+  margin: 0;
+  text-align: center;
+}
+/** footer **/
+footer {
+  background: var(--blue);
+  color: var(--white);
+  padding: 1.25rem 1rem;
+  text-align: center;
+}
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.15rem;
+  padding: 0 0 0.6rem;
+}
+.footer-icons a {
+  display: inline-flex;
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+}
+.footer-icons a:focus-visible {
+  outline: 0.1rem solid var(--white);
+}
+.footer-icons img {
+  width: 40px;
+  height: 40px;
+}
+footer p {
+  margin: 0.3rem 0;
+}
+
+/** larger views **/
+@media (min-width: 700px) {
+  .menu-button {
+    display: none;
+  }
+  .primary-navigation ul,
+  .primary-navigation.open ul {
+    display: flex;
+    flex-direction: row;
+  }
+  .primary-navigation li {
+    flex: 1;
+  }
+  .primary-navigation a {
+    text-align: center;
+    border-bottom: 0;
+    padding: 0.65rem 1rem;
+  }
+  .content-grid {
+    grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr);
+  }
+  .card-courses {
+    grid-column: 1 / -1;
+  }
+  .courses-classes {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .card-about,
+  .card-photo {
+    min-height: 245px;
+  }
+}
