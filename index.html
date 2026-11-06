@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Luis Chaves's WDD 231 course home page, web certificate courses, and portfolio projects.">
+  <meta name="author" content="Luis Chaves">
+  <title>WDD 231 | Luis Chaves | Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <script src="scripts/getdates.js" defer></script>
+  <script src="scripts/menu.js" defer></script>
+  <script src="scripts/courses.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Luis Chaves, Home">
+        <img class="brand-logo" src="images/logo.svg" alt="Site logo" width="46" height="46">
+        <span>WDD 231 Courses Hub</span>
+      </a>
+      <button id="menu-button" class="menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">
+        <span class="menu-icon" aria-hidden="true">☰</span>
+      </button>
+    </div>
+    <nav id="primary-navigation" class="primary-navigation" aria-label="Main navigation">
+      <ul>
+        <li><a class="active" href="index.html" aria-current="page">Home</a></li>
+        <li><a href="chamber/">Chamber Project</a></li>
+        <li><a href="final/">Final Project</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Home</h1>
+    <div class="content-grid">
+      <section class="card card-about" aria-labelledby="about-heading">
+        <h2 id="about-heading">About Me</h2>
+        <p>My name is Luis Chaves. I'm from Colombia and I'm currently studying Software Development at BYU-Idaho while working as a Customer Technical Support Specialist. I really like listening to music and practicing sports.</p>
+      </section>
+      <section class="card card-photo" aria-labelledby="photo-heading">
+        <h2 id="photo-heading">Student Photo</h2>
+        <div class="photo-container"><img src="images/profile.jpg" alt="Portrait of Luis Chaves" width="300" height="300"></div>
+      </section>
+      <section class="card card-courses" aria-labelledby="courses-heading">
+        <h2 id="courses-heading">Web Certificate Courses</h2>
+        <div class="courses-filter" role="group" aria-label="Filter courses">
+          <button type="button" class="filter-button selected" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="filter-button" data-filter="CSE" aria-pressed="false">CSE</button>
+          <button type="button" class="filter-button" data-filter="WDD" aria-pressed="false">WDD</button>
+        </div>
+        <div id="course-list" class="courses-classes" aria-live="polite"></div>
+        <p class="credits-total">The total credits for the courses listed above is <strong id="credit-counter">0</strong>.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-icons" aria-label="Social media links">
+      <a href="https://github.com/conantkd/wdd231" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository"><img src="images/github.svg" alt="" width="38" height="38"></a>
+      <a href="https://www.linkedin.com/in/luismchaves/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><img src="images/linkedin.svg" alt="" width="38" height="38"></a>
+      <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X social network"><img src="images/x.svg" alt="" width="38" height="38"></a>
+    </div>
+    <p>© <span id="currentyear"></span> | Luis Chaves | Colombia</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
