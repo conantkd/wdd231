@@ -5,6 +5,7 @@
   --bg-surface: #ffffff;
   --text-dark: #111827;
   --text-muted: #4b5563;
+  --border-primary: #1e3a8a;
   --border-light: #d1d5db;
   --primary-font: "Roboto", sans-serif;
 }
@@ -197,7 +198,7 @@ h1 {
 .menu-toggles button.active {
   background: var(--brand-primary);
   color: var(--bg-surface);
-  border-color: var(--brand-primary);
+  border-color: var(--border-primary);
 }
 
 #directory-container {
