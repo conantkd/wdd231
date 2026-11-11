@@ -1,0 +1,101 @@
+[
+  {
+    "name": "Grupo Nutresa",
+    "address": "Carrera 43A No. 1A Sur 143, Medellín",
+    "phone": "+57 604 3655600",
+    "website": "https://gruponutresa.com",
+    "image": "nutresa.webp",
+    "membershipLevel": 3,
+    "otherInfo": "Leading food processing company in Colombia"
+  },
+  {
+    "name": "Bancolombia",
+    "address": "Carrera 48 No. 26 85, Medellín",
+    "phone": "+57 604 5109000",
+    "website": "https://www.bancolombia.com",
+    "image": "bancolombia.webp",
+    "membershipLevel": 3,
+    "otherInfo": "Largest commercial bank in Colombia"
+  },
+  {
+    "name": "EPM",
+    "address": "Carrera 58 No. 42 125, Medellín",
+    "phone": "+57 604 4444115",
+    "website": "https://www.epm.com.co",
+    "image": "epm.webp",
+    "membershipLevel": 3,
+    "otherInfo": "Public utility company providing electricity and water"
+  },
+  {
+    "name": "Suramericana",
+    "address": "Carrera 43A No. 5A 113, Medellín",
+    "phone": "+57 604 4308888",
+    "website": "https://www.sura.com",
+    "image": "sura.webp",
+    "membershipLevel": 2,
+    "otherInfo": "Specialists in insurance and investment management"
+  },
+  {
+    "name": "Cementos Argos",
+    "address": "Carrera 43A No. 1A Sur 143, Medellín",
+    "phone": "+57 604 3198700",
+    "website": "https://argos.co",
+    "image": "argos.webp",
+    "membershipLevel": 2,
+    "otherInfo": "Multinational building materials company"
+  },
+  {
+    "name": "Grupo Éxito",
+    "address": "Carrera 48 No. 32B Sur 139, Envigado",
+    "phone": "+57 604 3396565",
+    "website": "https://www.grupoexito.com.co",
+    "image": "exito.webp",
+    "membershipLevel": 2,
+    "otherInfo": "Leading retail company in South America"
+  },
+  {
+    "name": "ISA",
+    "address": "Calle 12 Sur No. 18 168, Medellín",
+    "phone": "+57 604 3159000",
+    "website": "https://www.isa.co",
+    "image": "isa.webp",
+    "membershipLevel": 1,
+    "otherInfo": "Linear infrastructure systems and telecommunications"
+  },
+  {
+    "name": "Postobón",
+    "address": "Calle 52 No. 47 28, Medellín",
+    "phone": "+57 604 2655151",
+    "website": "https://www.postobon.com",
+    "image": "postobon.webp",
+    "membershipLevel": 3,
+    "otherInfo": "Major beverage company in Colombia"
+  },
+  {
+    "name": "Colcafé",
+    "address": "Calle 8 Sur No. 50 67, Medellín",
+    "phone": "+57 604 3659595",
+    "website": "https://www.colcafe.com.co",
+    "image": "colcafe.webp",
+    "membershipLevel": 2,
+    "otherInfo": "Renowned coffee processing and exporting company"
+  },
+  {
+    "name": "Ruta N",
+    "address": "Calle 67 No. 52 20, Medellín",
+    "phone": "+57 604 5167770",
+    "website": "https://www.rutanmedellin.org",
+    "image": "rutan.webp",
+    "membershipLevel": 1,
+    "otherInfo": "Center for innovation and business in Medellin"
+  },
+  {
+    "name": "Metro de Medellín",
+    "address": "Calle 44 No. 46 001, Bello",
+    "phone": "+57 604 4548888",
+    "website": "https://www.metrodemedellin.gov.co",
+    "image": "metro.webp",
+    "membershipLevel": 3,
+    "otherInfo": "Mass transit system operator for the Aburra Valley"
+  }
+]

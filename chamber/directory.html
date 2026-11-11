@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Luis Chaves's WDD 231 Chamber of Commerce Project Directory"
+    />
+    <meta name="author" content="Luis Chaves" />
+    <title>WDD 231 | Luis Chaves | Chamber of Commerce Directory</title>
+    
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+    <meta property="og:title" content="WDD 231 | Luis Chaves | Chamber of Commerce Directory" />
+    <meta property="og:description" content="Directory of local businesses and organizations belonging to the Medellin Chamber of Commerce." />
+    <meta property="og:image" content="https://conantkd.github.io/wdd231/chamber/images/directory-og.jpg" />
+    <meta property="og:url" content="https://conantkd.github.io/wdd231/chamber/directory.html" />
+    <meta property="og:type" content="website" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/base.css" />
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/menu.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="Luis Chaves, Home">
+          <img
+            class="brand-logo"
+            src="images/logo.svg"
+            alt="Site logo"
+            width="46"
+            height="46"
+          />
+          <span>Chamber of Commerce</span>
+        </a>
+        <button
+          id="menu-button"
+          class="menu-button"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+        >
+          <span class="menu-icon" aria-hidden="true">☰</span>
+        </button>
+      </div>
+      <nav
+        id="primary-navigation"
+        class="primary-navigation"
+        aria-label="Main navigation"
+      >
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li><a href="Discovery.html">Discovery</a></li>
+          <li><a class="active" href="directory.html" aria-current="page">Directory</a></li>
+          <li><a href="Join.html">Join</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="directory-header">
+        <h1>Directory</h1>
+        <div class="menu-toggles">
+          <button id="grid-btn" class="active" aria-label="Grid View">Grid</button>
+          <button id="list-btn" aria-label="List View">List</button>
+        </div>
+      </div>
+      <div id="directory-container" class="grid"></div>
+    </main>
+
+    <footer>
+      <nav class="footer-icons" aria-label="Social media links">
+        <a
+          href="https://github.com/conantkd/wdd231"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub repository"
+          ><img
+            src="images/github.svg"
+            alt="Github icon"
+            width="40"
+            height="40"
+        /></a>
+        <a
+          href="https://www.linkedin.com/in/luismchaves/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn profile"
+          ><img
+            src="images/linkedin.svg"
+            alt="Linkedin icon"
+            width="40"
+            height="40"
+        /></a>
+        <a
+          href="https://x.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="X social network"
+          ><img
+            src="images/x-social.svg"
+            alt="x.com icon"
+            width="40"
+            height="40"
+        /></a>
+      </nav>
+      <p>Medellin Chamber of Commerce | WDD231 Project </p>
+      <p>© <span id="currentyear"></span> | Luis Chaves | Colombia</p>
+      <p id="lastModified"></p>
+    </footer>
+  </body>
+</html>
