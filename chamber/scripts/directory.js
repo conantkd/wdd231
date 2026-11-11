@@ -36,7 +36,7 @@ function displayMembers(members) {
     card.classList.add('member-card');
     
     card.innerHTML = `
-      <img src="images/${member.image}" alt="${member.name} logo" loading="lazy" width="150" height="auto">
+      <img src="images/${member.image}" alt="${member.name} logo" loading="lazy" width="150" height="150">
       <div class="member-info">
         <h3>${member.name}</h3>
         <p class="tagline">${member.otherInfo}</p>
