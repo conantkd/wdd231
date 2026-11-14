@@ -40,10 +40,10 @@ function displayMembers(members) {
       <div class="member-info">
         <h3>${member.name}</h3>
         <p class="tagline">${member.otherInfo}</p>
-        <p><strong>LEVEL:</strong> ${getMembershipName(currentLevel)}</p>
-        <p><strong>EMAIL:</strong> info@${member.website.replace('https://www.', '').replace('https://', '')}</p>
-        <p><strong>PHONE:</strong> ${member.phone}</p>
-        <p><strong>URL:</strong> <a href="${member.website}" target="_blank">${member.website.replace('https://', '')}</a></p>
+        <p>${getMembershipName(currentLevel)}</p>
+        <p>info@${member.website.replace('https://www.', '').replace('https://', '')}</p>
+        <p>${member.phone}</p>
+        <p><a href="${member.website}" target="_blank">${member.website.replace('https://', '')}</a></p>
       </div>
     `;
     
