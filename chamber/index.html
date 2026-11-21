@@ -1,33 +1,47 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
       content="Luis Chaves's WDD 231 Chamber of Commerce Project Home Page"
-   >
-    <meta name="author" content="Luis Chaves">
+    />
+    <meta name="author" content="Luis Chaves" />
     <title>WDD 231 | Luis Chaves | Medellín Chamber of Commerce | Home</title>
-    
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-    <meta property="og:title" content="WDD 231 | Luis Chaves |Medellín Chamber of Commerce | Home">
-    <meta property="og:description" content="Connect with Medellín's business community, explore local businesses, and discover opportunities to grow your network.">
-    <meta property="og:image" content="https://conantkd.github.io/wdd231/chamber/images/home-og.jpg">
-    <meta property="og:url" content="https://conantkd.github.io/wdd231/chamber/">
-    <meta property="og:type" content="website">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta
+      property="og:title"
+      content="WDD 231 | Luis Chaves | Medellín Chamber of Commerce | Home"
+    />
+    <meta
+      property="og:description"
+      content="Connect with Medellín's business community, explore local businesses, and discover opportunities to grow your network."
+    />
+    <meta
+      property="og:image"
+      content="https://conantkd.github.io/wdd231/chamber/images/home-og.webp"
+    />
+    <meta
+      property="og:url"
+      content="https://conantkd.github.io/wdd231/chamber/"
+    />
+    <meta property="og:type" content="website" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap"
       rel="stylesheet"
-   >
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/base.css">
+    />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/base.css" />
     <script src="scripts/getdates.js" defer></script>
     <script src="scripts/menu.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlights.js" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -39,7 +53,7 @@
             alt="Site logo"
             width="46"
             height="46"
-         >
+          />
           <span>Chamber of Commerce</span>
         </a>
         <button
@@ -70,7 +84,61 @@
     </header>
 
     <main>
-        
+      <section class="hero">
+        <img
+          src="images/hero.webp"
+          alt="Medellín city skyline at night"
+          width="1200"
+          height="600"
+        />
+        <div class="hero-overlay">
+          <h1>Medellín Chamber of Commerce</h1>
+          <p>
+            Empowering local businesses, driving innovation, and building a
+            stronger Medellín.
+          </p>
+          <a class="cta-button" href="join.html">Join the Chamber</a>
+        </div>
+      </section>
+
+      <section class="home-grid">
+        <article class="card events-card">
+          <h2>Current Events</h2>
+          <ul class="events-list">
+            <li>
+              <strong>Aburrá Valley Business Summit</strong>
+              <span
+                >Plaza Mayor: Medellín Networking &amp; keynote speakers</span
+              >
+            </li>
+            <li>
+              <strong>Tech &amp; Innovation Forum</strong>
+              <span>Ruta N: Startups, AI, and digital transformation</span>
+            </li>
+            <li>
+              <strong>Local Entrepreneurs Expo</strong>
+              <span
+                >Parque Norte: Showcasing regional products and services</span
+              >
+            </li>
+          </ul>
+        </article>
+
+        <article class="card weather-card">
+          <h2>Current Weather</h2>
+          <div id="current-weather" class="weather-content"></div>
+        </article>
+
+        <article class="card forecast-card">
+          <h2>Weather Forecast</h2>
+          <div id="weather-forecast" class="forecast-content"></div>
+        </article>
+      </section>
+
+      <section class="spotlights-section">
+        <h2>Business Spotlights</h2>
+        <div id="spotlights-container" class="spotlights-grid"></div>
+      </section>
     </main>
 
     <footer>
@@ -85,7 +153,7 @@
             alt="Github icon"
             width="40"
             height="40"
-       ></a>
+        /></a>
         <a
           href="https://www.linkedin.com/in/luismchaves/"
           target="_blank"
@@ -96,7 +164,7 @@
             alt="Linkedin icon"
             width="40"
             height="40"
-       ></a>
+        /></a>
         <a
           href="https://x.com/"
           target="_blank"
@@ -107,9 +175,9 @@
             alt="x.com icon"
             width="40"
             height="40"
-       ></a>
+        /></a>
       </nav>
-      <p>Medellin Chamber of Commerce | WDD231 Project </p>
+      <p>Medellin Chamber of Commerce | WDD231 Project</p>
       <p>© <span id="currentyear"></span> | Luis Chaves | Colombia</p>
       <p id="lastModified"></p>
     </footer>
