@@ -21,7 +21,6 @@ html {
 body {
   margin: 0;
   font-family: var(--primary-font);
-  font-size: 1.0rem;
   line-height: 1.5;
   color: var(--text-dark);
   background: var(--bg-main);
@@ -44,18 +43,17 @@ a {
 .header-inner {
   max-width: 1200px;
   margin: auto;
-  padding: 0.70rem 1.0rem;
+  padding: 0.7rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.0rem;
+  gap: 1rem;
 }
 
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.70rem;
-  min-width: 0;
+  gap: 0.7rem;
   font-size: 1.25rem;
   font-weight: 600;
   text-decoration: none;
@@ -73,8 +71,7 @@ a {
   place-items: center;
   width: 45px;
   height: 45px;
-  padding: 0;
-  border: 0.05rem solid var(--border-light);
+  border: 1px solid var(--border-light);
   border-radius: 0.25rem;
   background: var(--bg-main);
   color: var(--text-dark);
@@ -86,11 +83,17 @@ a {
   background: var(--brand-primary);
 }
 
+.primary-navigation ul,
+.events-list,
+.forecast-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .primary-navigation ul {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0;
-  list-style: none;
   display: none;
 }
 
@@ -101,83 +104,59 @@ a {
 
 .primary-navigation a {
   display: block;
-  padding: 0.80rem 1.0rem;
+  padding: 0.8rem 1rem;
   text-decoration: none;
   color: var(--bg-surface);
   transition: background-color 0.15s ease;
 }
 
 .primary-navigation a:hover,
-.primary-navigation a:focus-visible {
+.primary-navigation a:focus-visible,
+.primary-navigation a.active {
   background: var(--brand-secondary);
 }
 
 .primary-navigation a.active {
-  background: var(--brand-secondary);
   font-weight: 700;
 }
 
 main {
-  width: min(100% - 2.0rem, 1170px);
-  margin: 0 auto 2.0rem;
+  width: min(100% - 2rem, 1170px);
+  margin: 0 auto 2rem;
 }
 
 h1 {
-  font-size: 1.60rem;
-  margin: 1.0rem 0 0.5rem;
-  color: var(--text-dark);
+  font-size: 1.6rem;
+  margin: 1rem 0 0.5rem;
 }
 
-.content-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.0fr);
-  gap: 1.0rem;
-}
-
-.card {
-  min-width: 0;
+.card,
+.spotlight-card,
+.hero {
   background: var(--bg-surface);
-  border-radius: 0.20rem;
+  border-radius: 0.25rem;
   overflow: hidden;
-  border: 0.10rem solid var(--border-light);
+  border: 0.1rem solid var(--border-light);
 }
 
-.card h2 {
-  font-size: 1.10rem;
-  line-height: 1.5;
+.card h2,
+.spotlight-header {
   margin: 0;
-  padding: 0.45rem 0.75rem;
+  padding: 0.5rem 0.75rem;
   text-align: center;
   background: var(--brand-primary);
   color: var(--bg-surface);
 }
 
-.card-about p {
+.card h2,
+.spotlight-header h3 {
+  font-size: 1.1rem;
   margin: 0;
-  padding: 1.0rem;
-  color: var(--text-dark);
-}
-
-.photo-container {
-  display: grid;
-  place-items: center;
-  padding: 1.0rem;
-}
-
-.photo-container img {
-  width: min(100%, 280px);
-  height: auto;
-  max-height: 320px;
-  object-fit: contain;
-  border-radius: 0.25rem;
 }
 
 .hero {
   position: relative;
-  margin: 1.0rem 0 1.5rem;
-  border-radius: 0.25rem;
-  overflow: hidden;
-  border: 0.10rem solid var(--border-light);
+  margin: 1rem 0 1.5rem;
 }
 
 .hero img {
@@ -196,18 +175,17 @@ h1 {
   gap: 0.75rem;
   padding: 1.25rem;
   background: linear-gradient(to top, rgba(17, 24, 39, 0.85), rgba(17, 24, 39, 0.15));
+  color: var(--bg-surface);
 }
 
 .hero-overlay h1 {
   margin: 0;
-  color: var(--bg-surface);
   font-size: 1.5rem;
 }
 
 .hero-overlay p {
   margin: 0;
   max-width: 55ch;
-  color: var(--bg-surface);
   font-size: 1.05rem;
 }
 
@@ -219,7 +197,7 @@ h1 {
   text-decoration: none;
   font-weight: 700;
   border-radius: 0.25rem;
-  border: 0.10rem solid var(--bg-surface);
+  border: 0.1rem solid var(--bg-surface);
   transition: background-color 0.15s ease;
 }
 
@@ -228,44 +206,19 @@ h1 {
   background: var(--brand-primary);
 }
 
-.home-grid {
+.home-grid,
+.spotlights-grid,
+#directory-container {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.0rem;
+  gap: 1rem;
+}
+
+.home-grid {
   margin-bottom: 1.5rem;
 }
 
-.events-card {
-  text-align: center;
-  vertical-align: center;
-}
-
-.events-list {
-  list-style: none;
-  margin: 0;
-  padding: 1.0rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.85rem;
-}
-
-.events-list li {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 0.75rem;
-  border-bottom: 1px solid var(--border-light);
-}
-
-.events-list li:last-child {
-  padding-bottom: 0;
-  border-bottom: none;
-}
-
-.events-list span {
-  font-size: 0.90rem;
-  color: var(--text-muted);
-}
-
+.events-card,
 .weather-card,
 .forecast-card {
   text-align: center;
@@ -273,13 +226,46 @@ h1 {
   flex-direction: column;
 }
 
+.events-list,
 .weather-content,
 .forecast-content {
   flex: 1;
-  padding: 1.0rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 0.75rem;
+}
+
+.events-list li,
+.forecast-list li {
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.events-list li {
+  display: flex;
+  flex-direction: column;
+}
+
+.forecast-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.events-list li:last-child,
+.forecast-list li:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.events-list span,
+.weather-details,
+.spotlight-info p,
+.member-info p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
 }
 
 .weather-main {
@@ -302,42 +288,15 @@ h1 {
 }
 
 .weather-desc {
-  margin: 0.20rem 0 0;
+  margin: 0.2rem 0 0;
   text-transform: capitalize;
-  color: var(--text-dark);
   font-weight: 500;
 }
 
-.weather-details {
-  margin-top: 0.75rem;
-  font-size: 0.90rem;
-  color: var(--text-muted);
-}
-
-.weather-details p {
+.weather-details p,
+.spotlight-info p,
+.member-info p {
   margin: 0.25rem 0;
-}
-
-.forecast-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.forecast-list li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 0.60rem;
-  border-bottom: 1px solid var(--border-light);
-}
-
-.forecast-list li:last-child {
-  padding-bottom: 0;
-  border-bottom: none;
 }
 
 .forecast-temp {
@@ -347,45 +306,16 @@ h1 {
 
 .spotlights-section h2 {
   font-size: 1.35rem;
-  margin: 0 0 1.0rem;
-  color: var(--text-dark);
-}
-
-.spotlights-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.0rem;
-}
-
-.spotlight-card {
-  background: var(--bg-surface);
-  border: 0.10rem solid var(--border-light);
-  border-radius: 0.25rem;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-
-.spotlight-header {
-  background: var(--brand-primary);
-  color: var(--bg-surface);
-  padding: 0.60rem 0.75rem;
-  text-align: center;
-}
-
-.spotlight-header h3 {
-  margin: 0;
-  font-size: 1.10rem;
+  margin: 0 0 1rem;
 }
 
 .spotlight-level {
-  margin: 0.20rem 0 0;
+  margin: 0.2rem 0 0;
   font-size: 0.85rem;
-  font-weight: 500;
 }
 
 .spotlight-body {
-  padding: 1.0rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -399,19 +329,15 @@ h1 {
   object-fit: contain;
 }
 
-.spotlight-info p {
-  margin: 0.25rem 0;
-  font-size: 0.90rem;
-  color: var(--text-muted);
-}
-
-.spotlight-info a {
+.spotlight-info a,
+.member-info a {
   color: var(--brand-secondary);
   text-decoration: none;
-  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
-.spotlight-info a:hover {
+.spotlight-info a:hover,
+.member-info a:hover {
   text-decoration: underline;
 }
 
@@ -419,7 +345,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.0rem;
+  gap: 1rem;
   margin-bottom: 1.5rem;
 }
 
@@ -431,7 +357,7 @@ h1 {
 .menu-toggles button {
   background: var(--bg-surface);
   color: var(--text-dark);
-  border: 0.10rem solid var(--border-light);
+  border: 0.1rem solid var(--border-light);
   padding: 0.5rem 1.5rem;
   cursor: pointer;
   font-weight: 600;
@@ -444,18 +370,13 @@ h1 {
   border-color: var(--border-primary);
 }
 
-#directory-container {
-  display: grid;
-  gap: 1.0rem;
-}
-
 #directory-container.grid {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1.0fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 #directory-container.grid .member-card {
   background: var(--bg-surface);
-  border: 0.10rem solid var(--border-light);
+  border: 0.1rem solid var(--border-light);
   border-radius: 0.5rem;
   padding: 1.5rem;
   text-align: center;
@@ -469,7 +390,7 @@ h1 {
   width: 150px;
   height: 150px;
   object-fit: contain;
-  margin-bottom: 1.0rem;
+  margin-bottom: 1rem;
 }
 
 #directory-container.list {
@@ -480,11 +401,8 @@ h1 {
 
 #directory-container.list .member-card {
   background: var(--bg-surface);
-  border: none;
   border-bottom: 1px solid var(--border-light);
-  border-radius: 0;
-  padding: 1.0rem;
-  text-align: left;
+  padding: 1rem;
 }
 
 #directory-container.list .member-card:nth-child(even) {
@@ -498,34 +416,19 @@ h1 {
 #directory-container.list .member-info {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.35rem 1.0rem;
+  gap: 0.35rem 1rem;
 }
-
-#directory-container.list .member-info > :nth-child(1) { grid-area: 1 / 1 / 2 / 2; }
-#directory-container.list .member-info > :nth-child(2) { grid-area: 2 / 1 / 3 / 2; }
-#directory-container.list .member-info > :nth-child(3) { grid-area: 3 / 1 / 4 / 2; }
-#directory-container.list .member-info > :nth-child(4) { grid-area: 1 / 2 / 2 / 3; }
-#directory-container.list .member-info > :nth-child(5) { grid-area: 2 / 2 / 3 / 3; }
-#directory-container.list .member-info > :nth-child(6) { grid-area: 3 / 2 / 4 / 3; }
 
 #directory-container.list .member-info h3,
 #directory-container.list .member-info p {
   margin: 0;
-  padding: 0;
   min-width: 0;
   overflow-wrap: break-word;
-  word-break: break-word;
 }
 
 .member-info h3 {
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 0.5rem;
   color: var(--brand-primary);
-}
-
-.member-info p {
-  margin: 0.25rem 0;
-  font-size: 0.90rem;
-  color: var(--text-muted);
 }
 
 .member-info .tagline {
@@ -534,38 +437,28 @@ h1 {
   margin-bottom: 0.75rem;
 }
 
-.member-info a {
-  color: var(--brand-secondary);
-  text-decoration: none;
-}
-
-.member-info a:hover {
-  text-decoration: underline;
-}
-
 footer {
   background: var(--brand-primary);
   color: var(--bg-surface);
-  padding: 1.25rem 1.0rem;
+  padding: 1.25rem 1rem;
   text-align: center;
 }
 
 .footer-icons {
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 1.15rem;
-  padding: 0 0 0.60rem;
+  padding-bottom: 0.6rem;
 }
 
 .footer-icons a {
   display: inline-flex;
-  padding: 0.20rem;
-  border-radius: 0.20rem;
+  padding: 0.2rem;
+  border-radius: 0.2rem;
 }
 
 .footer-icons a:focus-visible {
-  outline: 0.10rem solid var(--bg-surface);
+  outline: 0.1rem solid var(--bg-surface);
 }
 
 .footer-icons img {
@@ -574,7 +467,7 @@ footer {
 }
 
 footer p {
-  margin: 0.30rem 0;
+  margin: 0.3rem 0;
 }
 
 @media (min-width: 700px) {
@@ -587,25 +480,17 @@ footer p {
     flex-direction: row;
   }
   .primary-navigation li {
-    flex: 1.0;
+    flex: 1;
   }
   .primary-navigation a {
     text-align: center;
-    border-bottom: 0;
-    padding: 0.65rem 1.0rem;
-  }
-  .content-grid {
-    grid-template-columns: minmax(0, 2.0fr) minmax(220px, 1.0fr);
-  }
-  .card-about,
-  .card-photo {
-    min-height: 245px;
+    padding: 0.65rem 1rem;
   }
   .hero img {
     height: 420px;
   }
   .hero-overlay {
-    padding: 2.0rem;
+    padding: 2rem;
   }
   .hero-overlay h1 {
     font-size: 2.25rem;
@@ -613,14 +498,6 @@ footer p {
   .home-grid {
     grid-template-columns: 2fr 1fr 1fr;
   }
-
-  .weather-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.75rem;
-  }
-
   .spotlights-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -628,23 +505,9 @@ footer p {
     flex-direction: row;
     justify-content: space-between;
   }
-
   #directory-container.list .member-info {
     grid-template-columns: 1fr 1.5fr 0.8fr 1.5fr 1fr 1.2fr;
     align-items: center;
     gap: 0.5rem;
   }
-
-  #directory-container.list .member-info > :nth-child(n) {
-    grid-area: auto;
-  }
-
-  #directory-container.list .member-info h3,
-  #directory-container.list .member-info p {
-    font-size: 0.90rem;
-  }
-
-  #directory-container.list .member-info .tagline {
-    margin-bottom: 0;
-  }
-} 
+}
